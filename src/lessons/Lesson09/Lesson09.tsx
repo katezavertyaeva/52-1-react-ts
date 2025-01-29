@@ -17,6 +17,8 @@ function Lesson09() {
   //2 шаг контроля - создание функции, которая будет забирать значение введённое пользователем
   //из объекта event и сохранять его в state
   const onChangeName = (event: ChangeEvent<HTMLInputElement>) => {
+    console.log("Input works")
+    console.log(event.target.value)
     // setUserNameValue(`${event.target.value} react`)
     setUserNameValue(event.target.value)
   }
@@ -37,9 +39,9 @@ function Lesson09() {
   //useEffect при обновлении компонента (повторный рендер)
   //Чтобы функция (1-й аргумент) выполнилась при изменении значения в первом инпуте
   // передаётся массив зависимостей с тем стейтом (значением), при изменении которого нужно выполнять функцию (2-й аргумент)
-  useEffect(() => {
-    console.log('Update');
-  }, [userNameValue])
+  // useEffect(() => {
+  //   console.log('Update');
+  // }, [userNameValue])
 
   //useEffect при размонтировании компонента (до момента удаления)
   //Чтобы функция (1-й аргумент) выполнилась один раз, но непосредственно перед удалением компонента
